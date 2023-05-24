@@ -1,0 +1,194 @@
+<!--Tutoriaux suivis : 
+La création du menu & déroulent & responsive html et CSS
+ https://www.youtube.com/watch?v=HNJDWcrhd7Y&list=PLwLsbqvBlImHAT6eA11g56NmqSSxxUT3I&index=3 
+
+ Des bonnes bases html et CSS
+https://www.youtube.com/watch?v=KQUoBkrKAaQ&t=313s -->
+
+
+<!DOCTYPE html>
+<html style="height: 100%; width: 100%;">
+  <head>
+    <title>CV Reynaud_Benoit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial_scale=1">
+    <link rel="stylesheet" href="cv-menu-responsive.css"/>
+    <link rel="stylesheet" href="cv-mise-en-page.css"/>
+  </head>
+
+  
+  <body style="height: 100%;  width: 100%;">
+    <nav><!--Menu & lien vers les autres pages-->
+      <label for="menu-mobile" class="menu-mobile">CV Modèrne</label>
+      <input type="checkbox" id="menu-mobile" role="button">
+      <ul>
+        <li class="lieux"><a href="lieux.html">Lieux</a>
+          <ul class="submenu">
+            <li><a href="Adresses.html">Adresses</a></li>
+            <li><a href="Voyages.html">Voyages</a></li>
+          </ul>
+        </li>
+        <li class="emplois"><a href="emplois.html">Emplois</a>
+          <ul class="submenu">
+            <li><a href="Batiment.html">Bâtiment</a></li>
+            <li><a href="Logistique.html">Logistique</a></li>
+            <li><a href="Autres.html">Autres</a></li>
+          </ul>
+        </li>
+        <li class="divers"><a href="divers.html">Divers</a>
+          <ul class="submenu">
+            <li><a href="Loisirs.html">Loisirs</a></li>
+            <li><a href="Sport.html">Sport</a></li>
+          </ul>
+        </li>
+        <li class="contact"><a href="footer">Contact</a></li> <!--trouver comment renvoyer au pied de la page-->
+      </ul>
+    </nav><!--Fin du Menu & lien vers les autres pages-->
+
+    <h1>Futur dévellopeur d'application, web et 3D voir IA</h1>
+    <div>
+      <div class="left_side"><!--Information Personnel left_side-->
+        <img
+          src="photo_de_profil.jpg"
+          alt="Reynaud Benoit"
+          class="image_profile"
+        /><br />
+        <h3>Etat Civile</h3>
+        <ul>
+          <li>Reynaud Benoit</li>
+          <li>40 ans</li>
+        </ul>
+        <h3>Contacts</h3>
+        <ul>
+          <li>Vallauris Le Mûrier</li>
+          <li>+33 6 64 14 70 20</li>
+          <li>benoitreynaud@aol.com</li>
+        </ul>
+        <h3>Liens</h3>
+        <ul>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="www.linkedin.com/in/reynaud-benoit-22/" >Linkedin Profile</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="a_modifer" >Autre</a>
+          </li>
+          <li>
+            <a target="_blank" rel="noopener noreferrer" href="a_modifier">Autre</a>
+          </li>
+        </ul>
+        <h3>Langues</h3>
+        <ul>
+          <li>Français : Langue maternelle</li>
+          <li>Anglais : B2</li>
+        </ul>
+        <h3>Centres d'intérêts</h3>
+        <ul>
+          <li>Lecture</li>
+          <li>Sport(Vélo, Art martiaux)</li>
+          <li>3D </li>
+        </ul>
+      </div>
+
+      <div class="right_side"><!--Experience Professionnelles-->
+        <h2><!--Formation diplôme-->
+          <p class="red_part">Dip</p>
+          <p class="second_part">lôme et Formations</p>
+        </h2>
+        <ul>
+          <p>
+          <strong><i>Bachelor IT</i></strong>
+            <ul class="non_puce">
+              <li>D'avril 2023 à juin 2025 La plateforme Cannes</li>
+              <li>RunTrack jusqu'à mi-Août très intense, puis 2ans en alternance.</li>
+              <li>Liste et instruction sur le déroulement de la formation cliqué ici.</li>
+            </ul>
+          </p>
+          <p>
+            <strong><i>CAP Construction Maçonnerie Béton Armé</i></strong>
+            <ul class="non_puce">
+              <li>Décembre 2001 à juillet 2003 CAP avec les Compagnon du devoir Lyon</li>
+            </ul>
+          </p>
+        </ul>
+        <h2><!--Compétences-->
+          <p class="bleu_part">Comp</p>
+          <p class="second_part">étences loging</p>
+        </h2>
+        <ul>
+          <li><strong>Programmation   </strong>: HTML5/CSS3, Python (Avec POO), PHP, C, C++ </li>
+          <li><strong>Base de données </strong>: SQL</li>
+          <li><strong>Développement   </strong>:Visual Studio Code, Githug Desktop</li>
+        </ul>
+
+
+        <h2><!--Experience professinnelles-->
+          <p class="green_part">Exp</p>
+          <p class="second_part">érience professionnelles</p>
+        </h2>
+        <ul class="list_right_side">
+ 
+
+          <li class="li_mission">
+            <div class="mission_period">01/2023 à 03/2023</div>
+            <div class="mission_title">Intérim Polyvalent</div>
+            <div class="mission_location">Adecco Mougins</div>
+          </li>
+          <p>
+            <ul class="mission_detail">
+              <li>-Divers poste occupé dans le bâtiment, manutention, logistique, etc..</li>
+            </ul>
+          </p>
+
+
+
+          <li class="li_mission">
+            <div class="mission_period">12/2022 à 01/2023</div>
+            <div class="mission_title">Plongeur, Commis.</div>
+            <div class="mission_location">Golf Saint-Dona Restaurant La Closerie</div>
+          </li>
+          <p>
+            <ul class="mission_detail">
+              <li>-Plongeur, aide en cuisine, nettoyage et entretien des lieux et des poste de travail,</li>
+              <li> réparation d'équipement dans la mesure du possible.</li>
+            </ul>
+          </p>
+
+
+
+          <li class="li_mission">
+            <div class="mission_period">08/2017 à 11/2022</div>
+            <div class="mission_title">CDI Intérim</div>
+            <div class="mission_location">Adecco Mougins</div>
+          </li>
+          <p>
+            <ul class="mission_detail">
+              <li>-Plomberies -Manutention -Magasinier -Logistique -etc...</li>
+            </ul>
+          </p>
+
+ 
+          <li class="li_mission">
+            <div class="mission_period">08/2003 à 08/2017</div>
+            <div class="mission_title">Intérimaire</div>
+            <div class="mission_location">Lyon, Toulouse, Dunkerque, Paris, La Réunion, Côte d'Azur</div>
+          </li>
+          <p>
+            <ul class="mission_detail">
+              <li>Divers domaine qui ne requière pas de diplôme particulière.</li>
+              <li>Divers emploi dans le bâtiment</li>
+              <li>-Maçonnerie -Plombier -Plaquiste -Carreleur -etc..</li>
+              <li>Autres</li>
+              <li>-Manutention -Magasinier -Logistique -Animateur -etc...</li>
+            </ul>
+          </p>
+
+
+        </ul>
+      </div>
+    </div>
+
+
+
+  </body>
+
+</html>

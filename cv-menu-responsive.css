@@ -1,0 +1,74 @@
+/*Css du Menu*/
+
+/* Police générale pour la page et mise a zéro des marges qui peuve varié suivant les navigateurs*/
+body{ font-family: Verdana, Calibri, sans-serif; margin: 0px; padding: 0px;}
+
+/*Mise en place de la bar des Menu du cv modèrne*/
+nav{ width: 100%; background-color: #424558;}/*Utilisation de toute la largeur du body*/
+nav > ul{ margin: 0px; padding: 0px;}/*Mise à zéro des marges*/
+nav > ul > li{ list-style-type:none;} /*Puce enlever*/
+nav > ul > li > ul > li { list-style-type:none;}
+/* Losque des elements parent non flotant contienne des éléments d'enfants flotant, */
+nav > ul > li{float: left; position: relative;}/*Aligner de gauche à droite*/
+/*ici "ul" est le parent non flotant et "li" et l'enfant flotant*/
+
+/* le css va supprimer la hauteur des parents qui ne va plus s'afficher */
+/* la solution la plus simple va être d'appliqué un ??? overflo iden ??? à l'élément parents */
+/* Ici on pouras pas utilisé un ??? overflo iden ??? sur l'élément parent "ul" sinon on verras plus les sous menu*/
+/**/
+/*  La solution va être d'utilisé : */
+/* ??? hack css de type clearfix ?? ? très connu des développeurs : */
+nav > ul::after{content: ""; display: table; clear: both; }
+
+.submenu{ display: none;}/*Pour cacher les sous menus*/
+
+ /*Camouflage du bouton CV Modèrne*/
+nav input[type=checkbox]{display: none; }
+nav label{ display: none;}
+
+/*II la mise en forme des lien des menu*/
+nav a { display: inline-block; text-decoration: none; }
+nav > ul > li > a{ padding: 20px 30px; color: #fff; }
+
+/*III lorsque on passe la sourie par dessus les menu ça fais tout désendre on va enlever lépéseur
+de ce dèrnier du padding*/
+nav > ul > li:hover a{ padding: 15px 30px 20px 30px; }
+
+/*II lorsque que la sourie passe dessu*/
+nav li:hover .submenu{ display: inline-block; position: absolute; top: 100%; left: 0px; padding: 0px; z-index: 1000; }
+
+/*II Petite ligne audessu du boutton menu*/
+.submenu li a{ padding: 15px 30px; font-size: 13px; color: #222538; width: 270px; }
+
+/*II Ajout de couleur*/
+ /*RGBa le 'a' permet de rajouter de l'opasité*/
+.lieux:hover{ border-top: 5px solid #e44d26; background-color: rgba(228, 77, 38, 0.15); }
+.emplois:hover{ border-top: 5px solid #0070bb; background-color: rgba(000 , 112, 192, 0.15);}
+.divers:hover{ border-top: 5px solid #f1dc4f; background-color: rgba(241, 211, 79, 0.15); }
+.contact:hover{ border-top: 5px solid #bbb; background-color: rgba(220, 220, 220, 0.15); }
+
+/*Ajout de couleur au sous-menu*/
+.lieux .submenu{ background-color: rgb(230, 100, 40); }
+.emplois .submenu{ background-color:rgb(000, 160, 240) ; }
+.divers .submenu{ background-color: rgb(250, 215, 100); }
+
+/*Changer l'écriture lorce que la sourie passe dessu*/
+.submenu li:hover a{ color: #eee; font-weight: bold; }
+
+/*Et une couleur de fond lorsque la sourie passe par dessu*/
+.lieux .submenu li:hover{ background-color: rgb(210, 77, 60); }
+.emplois .submenu li:hover{ background-color: rgb(000, 115, 200); }
+.divers .submenu li:hover{ background-color: rgb(200, 165, 75); }
+
+/*Donc après l'étape V le menu s'affiche pas du coup la métode en css et la suivante*/
+nav input[type=checkbox]:checked ~ ul { display: block; }
+
+/*V à 27min22  appliqué à un mobile ou une fentre réduite */
+@media screen and (max-width: 780px){
+    .menu-mobile{ display: block; color: #fff; background-color: RGBa(29, 197, 151, 0.97); text-align: center; padding: 12px 0px; }
+    nav ul{ display: none; }
+/*V 32min14*/
+    nav ul li, nav ul li a{ width: 100%; text-align: center;}
+    nav ul li a, nav ul li:hover a{ padding: 10px 0px; }
+    nav li:hover .submenu{ display: block; position: static; }
+}
